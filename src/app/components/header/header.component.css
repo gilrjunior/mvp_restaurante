@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: red; /* Fundo vermelho */
-    color: white; /* Texto branco */
+    background-color: red;
+    color: white;
     padding: 10px 20px;
     font-size: 1.5rem;
     margin: 0 auto;
