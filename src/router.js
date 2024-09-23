@@ -6,10 +6,10 @@ const user_controller = require('./controllers/user_controller')
 const middlewares = require('./middlewares/middlewares');
 
 //Restaurant Endpoints
-router.post('/restaurants', middlewares.checkToken, middlewares.validateName, middlewares.validateAddress ,restaurant_controller.create)
+router.post('/restaurants', middlewares.checkToken, middlewares.validateName, middlewares.validateAddress, middlewares.validatePhone ,restaurant_controller.create)
 router.get('/restaurants/:id', middlewares.checkToken, restaurant_controller.getOne)
 router.get('/restaurants', middlewares.checkToken, restaurant_controller.getAll)
-router.put('/restaurants', middlewares.checkToken, middlewares.validateId, middlewares.validateName, middlewares.validateAddress, restaurant_controller.update)
+router.put('/restaurants', middlewares.checkToken, middlewares.validateId, middlewares.validateName, middlewares.validateAddress, middlewares.validatePhone, restaurant_controller.update)
 router.delete('/restaurants/:id', middlewares.checkToken, restaurant_controller.destroy)
 
 //Items Endpoints

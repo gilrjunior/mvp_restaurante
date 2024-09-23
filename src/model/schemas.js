@@ -15,6 +15,10 @@ const Restaurant = sequelize.define('Restaurant', {
     address: {
         type: DataTypes.TEXT,         
         allowNull: false              
+    },
+    phone: {
+        type: DataTypes.STRING,         
+        allowNull: false 
     }
 }, {
     tableName: 'restaurants',        

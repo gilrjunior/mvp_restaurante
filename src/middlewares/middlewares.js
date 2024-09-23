@@ -48,6 +48,22 @@ const validateAddress = (request, response, next) => {
 
 };
 
+const validatePhone = (request, response, next) => {
+
+    const { phone } = request.body;
+
+    if(phone == undefined || phone == null){
+        return response.status(400).json({message: 'O Telefone deve ser informado!'});
+    }
+
+    if(phone == ''){
+        return response.status(400).json({message: 'O Telefone não pode ser vazio!'});
+    }
+
+    next();
+
+};
+
 const validateDescription= (request, response, next) => {
 
     const { description } = request.body;
@@ -119,7 +135,7 @@ const validatePassword= (request, response, next) => {
 const checkToken = (request, response, next) => {
 
     const authHeader = request.headers['authorization']
-    const token = authHeader && authHeader.split(" ")[1]
+    const token = authHeader.split(" ")[1]
 
     if(!token){
 
@@ -130,14 +146,15 @@ const checkToken = (request, response, next) => {
     try {
         
         jwt.verify(token, process.env.SECRET)
-        next();
 
+        
     } catch (error) {
         
         return response.status(401).json({message: 'Token Inválido!'});
 
     }
 
+    next();
 
 }
 
@@ -147,6 +164,7 @@ module.exports = {
     validateId,
     validateName,
     validateAddress,
+    validatePhone, 
     validateDescription,
     validatePrice,
     validateEmail,
