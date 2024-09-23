@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="back">
+    <button (click)="goBack()" class="back-button">Voltar</button>
+  </div>
+
+    <h1>Cardápio - {{restaurant_name}}</h1>
+    <div class="infos">
+      <small>{{restaurant_address}}</small>
+      <small>Telefone: {{restaurant_phone}}</small>
+    </div>
+    <input
+      type="text"
+      placeholder="Pesquise aqui"
+      [(ngModel)]="searchQuery"
+      class="search-input"
+    />
+    <ul class="items-list">
+      <li *ngFor="let item of filteredItems()">
+        <h2>{{ item.name }}</h2>
+        <p>Descrição: {{ item.description }}</p>
+        <p>R$ {{ item.price }}</p>
+      </li>
+    </ul>
+  </div>
+

@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Lista de Restaurantes</h1>
+    <input
+      type="text"
+      placeholder="Pesquise aqui"
+      [(ngModel)]="searchQuery"
+      class="search-input"
+    />
+    <ul class="restaurant-list">
+      <li *ngFor="let restaurant of filteredRestaurants()">
+        <div (click)="go_items(restaurant.id, restaurant.name, restaurant.address, restaurant.phone)">
+          <h2>{{ restaurant.name }}</h2>
+        </div>
+      </li>
+    </ul>
+  </div>

@@ -1,0 +1,21 @@
+<div class="container">
+
+    <div class="login-container">
+        <h2>{{ login_status ? 'Entrar' : 'Registrar-se' }}</h2>
+        <form (ngSubmit)="auth_user()">
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" [(ngModel)]="user_email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" [(ngModel)]="user_password" required>
+            </div>
+            <button type="submit">{{ login_status ? 'Entrar' : 'Registrar' }}</button>
+        </form>
+        <br><br>
+        <button class="register" (click)="register()">{{ login_status ? 'Registre-se' : 'Entrar' }}</button>
+
+    </div>
+
+</div>

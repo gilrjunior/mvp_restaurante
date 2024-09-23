@@ -2,12 +2,7 @@
   "name": "frontend",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:frontend": "node dist/frontend/server/server.mjs"
+    "ng": "ng"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +17,7 @@
     "@angular/router": "^18.2.0",
     "@angular/ssr": "^18.2.5",
     "express": "^4.18.2",
+    "ngx-cookie-service": "^18.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.10"
