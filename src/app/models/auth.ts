@@ -1,4 +1,4 @@
 export interface Auth {
-    message:String
-    token?:String
+    message:string
+    token?:string
 }

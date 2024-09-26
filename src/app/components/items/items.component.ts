@@ -15,7 +15,7 @@ import { RestaurantsService } from '../../services/restaurants/restaurants.servi
 })
 export class ItemsComponent implements OnInit {
 
-  public searchQuery: String = '';
+  public searchQuery: string = '';
   private items:Item[] = []
   public restaurant_name = ''
   public restaurant_address = ''
@@ -57,6 +57,12 @@ export class ItemsComponent implements OnInit {
 
   goBack() {
     this.router.navigate(['']);
+  }
+
+  getNumber(price:number) {
+
+    return price
+
   }
 
 }

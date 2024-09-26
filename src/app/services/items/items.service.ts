@@ -13,7 +13,7 @@ export class ItemsService {
 
   constructor(private http:HttpClient, private auth:AuthService) {}
 
-  get(restaurant_id:Number){
+  get(restaurant_id:number){
 
     const token = this.auth.getToken()
 

@@ -25,7 +25,7 @@ export class RestaurantsService {
 
   }
 
-  getOne(id:Number){
+  getOne(id:number){
 
     const token = this.auth.getToken()
 

@@ -14,8 +14,8 @@ import { AuthService } from '../../services/auth/auth.service';
 })
 export class AuthComponent implements OnInit {
 
-  public user_email = ''
-  public user_password = ''
+  public user_email:string = ''
+  public user_password:string = ''
   public login_status:Boolean = true
 
   constructor(private auth:AuthService, private router:Router) {}

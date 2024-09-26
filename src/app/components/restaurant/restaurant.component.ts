@@ -14,7 +14,7 @@ import { RestaurantsService } from '../../services/restaurants/restaurants.servi
 })
 export class RestaurantComponent implements OnInit {
 
-  public searchQuery: String = '';
+  public searchQuery: string = '';
   private restaurants:Restaurant[] = []
 
   constructor(private restauranteService:RestaurantsService, private router:Router){}
